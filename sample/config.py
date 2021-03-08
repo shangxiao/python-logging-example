@@ -5,7 +5,9 @@ import sys
 # logging.basicConfig(handler=logging.StreamHandler(sys.stdout), level=logging.DEBUG)
 logger = logging.getLogger()
 stdout_handler = logging.StreamHandler(sys.stdout)
-stdout_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+stdout_handler.setFormatter(
+    logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+)
 logger.addHandler(stdout_handler)
 logger.setLevel(logging.DEBUG)
 
